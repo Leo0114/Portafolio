@@ -1,6 +1,5 @@
 ---
 title: Seguimiento de Gastos
-tag: "gastos"
 cover: "@assets/Gastos.webp"
 coverAlt: "Gastos Web"
 repo: "https://github.com/Leo0114/gastos"

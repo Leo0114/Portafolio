@@ -1,6 +1,5 @@
 ---
 title: Lista de Tareas
-tag: "tareas"
 cover: "@assets/Tareas.webp"
 coverAlt: "crear tareas Web"
 repo: "https://github.com/Leo0114/react-example"

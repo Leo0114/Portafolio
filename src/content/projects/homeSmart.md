@@ -1,6 +1,5 @@
 ---
 title: Home Smart
-tag: "smart"
 cover: "@assets/smart.webp"
 coverAlt: "Home Smart Web"
 repo: "https://github.com/Leo0114/HomeSmart"

@@ -1,6 +1,5 @@
 ---
 title: Project Amigo
-tag: "pa"
 cover: "@assets/Astro.webp"
 coverAlt: "Project Amigo Web"
 repo: "https://github.com/Leo0114/DemoPA"

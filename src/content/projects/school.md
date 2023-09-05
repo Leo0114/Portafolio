@@ -1,6 +1,5 @@
 ---
 title: School Website
-tag: "school"
 cover: "@assets/Astro.webp"
 coverAlt: "School page project"
 repo: "https://github.com/Leo0114/Terceraparcial"

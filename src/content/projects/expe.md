@@ -1,6 +1,5 @@
 ---
 title: Experiences Web
-tag: "expe"
 cover: "@assets/beach.webp"
 coverAlt: "Experiences Web"
 repo:  "https://github.com/Leo0114/Experiences"

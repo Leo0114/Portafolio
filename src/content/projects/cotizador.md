@@ -1,6 +1,5 @@
 ---
 title: Cotizador de Criptomonedas
-tag: "crypto"
 cover: "@assets/Crypto.webp"
 coverAlt: "Cotizador de Crypto Web"
 repo: "https://github.com/Leo0114/cripto"
