@@ -10,7 +10,7 @@ const projects = await getCollection("projects");
 >
   {
     projects.map((project) => {
-      const route = `projects/${project.slug}`;
+      const route = `/project/${project.slug}`;
       return (
         <>
           <a

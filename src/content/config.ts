@@ -10,6 +10,7 @@ const projects = defineCollection({
       repo: z.string(),
       build: z.string(),
       style: z.string(),
+      tag: z.string(),
     }),
 });
 
