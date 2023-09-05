@@ -1,9 +1,10 @@
 ---
 title: Citas app
+tag: "citas"
 cover: "@assets/Citas.webp"
 coverAlt: "Agendar Citas Web"
-web: "https://leo0114.github.io/citas-react/"
 repo: "https://github.com/Leo0114/citas-react"
+web: "https://leo0114.github.io/citas-react/"
 build: React
 style: Tailwind
 ---

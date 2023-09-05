@@ -1,0 +1,29 @@
+---
+import GitButtons from "@components/layout/GitButtons.astro";
+import Imagen from "@components/layout/Imagen.astro";
+import Return from "@components/layout/Return.astro";
+import Layout from "@layouts/Layout.astro";
+import ProjectPost from "@components/ProjectPost.astro";
+import { type CollectionEntry, getCollection } from "astro:content";
+import type { Code, Debug } from "astro:components";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("projects");
+  return posts.map((post) => ({
+    params: {
+      project: { slug: post.slug },
+      props: post,
+    },
+  }));
+}
+type Props = CollectionEntry<"projects">;
+const post = Astro.props;
+const { Content } = await post.render();
+---
+
+<Layout>
+  <Return />
+  <ProjectPost {...post.data}>
+    <Content />
+  |</ProjectPost>
+</Layout>

@@ -1,0 +1,33 @@
+---
+import Imagen from "@components/layout/Imagen.astro";
+import { getCollection } from "astro:content";
+
+const projects = await getCollection("projects");
+---
+
+<div
+  class="grid md:grid-cols-3 gap-2 object-contain drop-shadow-[0px_35px_35px_rgba(39,250,131,0.2)]"
+>
+  {
+    projects.map((project) => {
+      const route = `projects/${project.slug}`;
+      return (
+        <>
+          <a
+            href={route}
+            class="relative inline-block group transition-all py-4 hover:drop-shadow-[0px_35px_35px_rgba(39,250,131,0.3)]"
+          >
+            <Imagen
+              img={project.data.cover}
+              alt={project.data.coverAlt}
+              transition:name="img"
+            />
+            <div class="absolute bottom-4 left-0 w-[300px] h-[300px] flex flex-col justify-end px-4 py-2 bg-gradient-to-b from-transparent to-black bg-opacity-80 opacity-0 group-hover:opacity-80 transition-opacity">
+              <span class="text-slate-50 text-xl">{project.data.title}</span>
+            </div>
+          </a>
+        </>
+      );
+    })
+  }
+</div>

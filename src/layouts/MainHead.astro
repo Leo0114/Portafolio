@@ -1,0 +1,13 @@
+---
+import { SEO } from "astro-seo";
+const { seoTitle, seoDesc } = Astro.props;
+import { ViewTransitions } from "astro:transitions";
+---
+
+<head>
+  <SEO title={seoTitle} description={seoDesc} />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <ViewTransitions fallback="swap" />
+  <link rel="icon" type="image/svg+xml" href="/Portfolio/port.svg" />
+</head>

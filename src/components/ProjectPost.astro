@@ -1,0 +1,38 @@
+---
+import type { CollectionEntry } from "astro:content";
+type Props = CollectionEntry<"projects">["data"];
+import Imagen from "@components/layout/Imagen.astro";
+import GitButtons from "@components/layout/GitButtons.astro";
+const { title, coverAlt, cover, web, repo, build, style } = Astro.props;
+---
+
+<section class="mx-auto lg:w-10/12 w-10/12 h-screen">
+  <div class="container mx-auto flex px-5 md:flex-row flex-col items-center">
+    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 md:mb-0 mb-10">
+      <Imagen
+        transition:name="img"
+        alt={coverAlt}
+        img={cover}
+        ImgClass="object-cover object-center rounded-lg shadow-md drop-shadow-[10px_10px_35px_rgba(39,245,131,0.6)] "
+      />
+    </div>
+
+    <div
+      class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center"
+    >
+      <h1
+        class="title-font sm:text-4xl text-3xl mb-4 font-medium text-slate-50"
+      >
+        {title}
+      </h1>
+      <p class="mb-6 text-sm">
+        <span class="border-2 p-2 border-green-600 rounded-full">{build}</span
+        ><span class="border-2 p-2 border-sky-600 rounded-full ml-4"
+          >{style}</span
+        >
+      </p>
+      <p class="mb-8 leading-relaxed text-lg text-justify">{title}</p>
+      <GitButtons github={repo} web={web} />
+    </div>
+  </div>
+</section>
