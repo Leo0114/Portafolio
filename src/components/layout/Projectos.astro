@@ -1,7 +1,7 @@
 ---
 import Imagen from "@components/layout/Imagen.astro";
 import { getCollection } from "astro:content";
-const projects = await getCollection("projects");
+const projects = (await getCollection("projects")) as any[];
 ---
 
 <div
@@ -10,6 +10,7 @@ const projects = await getCollection("projects");
   {
     projects.map((project) => {
       const route = `/projects/${project.slug}`;
+      console.log(route);
       return (
         <>
           <a
