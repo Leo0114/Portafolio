@@ -10,7 +10,6 @@ const projects = (await getCollection("projects")) as any[];
   {
     projects.map((project) => {
       const route = `/projects/${project.slug}`;
-      console.log(route);
       return (
         <>
           <a

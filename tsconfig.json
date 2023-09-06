@@ -2,7 +2,6 @@
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
     "strictNullChecks": true,
-    "allowJs": true,
     "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],
