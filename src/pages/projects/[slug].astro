@@ -6,16 +6,21 @@ import GitButtons from "@components/layout/GitButtons.astro";
 import { type CollectionEntry, getCollection } from "astro:content";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("projects");
-  return posts.map((post) => ({
-    params: {
-      project: { slug: post.slug },
-      props: { post },
-    },
-  }));
+  const projects = await getCollection("projects");
+  const paths = projects.map((project) => {
+    return {
+      params: {
+        slug: project.slug,
+      },
+      props: {
+        project,
+      },
+    };
+  });
+  return paths;
 }
-type Props = { post: CollectionEntry<"projects"> };
-const { post } = Astro.props;
+type Props = { project: CollectionEntry<"projects"> };
+const { project } = Astro.props;
 ---
 
 <Layout>
@@ -25,8 +30,8 @@ const { post } = Astro.props;
       <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 md:mb-0 mb-10">
         <Imagen
           transition:name="img"
-          alt={post.data.coverAlt}
-          img={post.data.cover}
+          alt={project.data.coverAlt}
+          img={project.data.cover}
           ImgClass="object-cover object-center rounded-lg shadow-md drop-shadow-[10px_10px_35px_rgba(39,245,131,0.6)] "
         />
       </div>
@@ -37,21 +42,20 @@ const { post } = Astro.props;
         <h1
           class="title-font sm:text-4xl text-3xl mb-4 font-medium text-slate-50"
         >
-          {post.data.title}
+          {project.data.title}
         </h1>
         <p class="mb-6 text-sm">
           <span class="border-2 p-2 border-green-600 rounded-full"
-            >{post.data.build}</span
+            >{project.data.build}</span
           ><span class="border-2 p-2 border-sky-600 rounded-full ml-4"
-            >{post.data.build}</span
+            >{project.data.build}</span
           >
         </p>
-        <GitButtons github={post.data.repo} web={post.data.web} />
+        <GitButtons github={project.data.repo} web={project.data.web} />
       </div>
+      <div class="prose prose-2xl mb-8 leading-relaxed text-lg text-justify">
+        {project.body}
+      </div>|
     </div>
   </section>
-
-  <div class="prose prose-2xl mb-8 leading-relaxed text-lg text-justify">
-    {post.body}
-  </div>|
 </Layout>
