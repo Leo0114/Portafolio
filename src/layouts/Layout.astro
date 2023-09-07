@@ -2,6 +2,7 @@
 import Navbar from "@components/Navbar.astro";
 import MainHead from "./MainHead.astro";
 import Footer from "@components/Footer.astro";
+import { fade } from "astro:transitions";
 const { title, seoDesc, seoTitle } = Astro.props;
 ---
 
@@ -10,10 +11,10 @@ const { title, seoDesc, seoTitle } = Astro.props;
   <MainHead title={title} seoTitle={seoTitle} seoDesc={seoDesc} />
   <body
     class="bg-slate-900 text-slate-50 overflow-y-scroll"
-    transition:animate="none"
+    transition:animate={fade({ duration: "0.4s" })}
   >
     <Navbar />
-    <div transition:animate="none">
+    <div transition:animate="slide">
       <slot />
     </div>
     <Footer />

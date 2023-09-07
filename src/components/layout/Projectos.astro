@@ -12,7 +12,7 @@ const { projects } = Astro.props;
 >
   {
     projects.map((project) => {
-      const route = `/projects/${project.slug}`;
+      const route = `/Portafolio/projects/${project.slug}`;
       return (
         <>
           <a
@@ -20,9 +20,10 @@ const { projects } = Astro.props;
             class="relative inline-block group transition-all py-4 hover:drop-shadow-[0px_35px_35px_rgba(39,250,131,0.3)]"
           >
             <Imagen
+              transition:name="img"
+              transition:persist
               img={project.data.cover}
               alt={project.data.coverAlt}
-              transition:name="img"
             />
             <div class="absolute bottom-4 left-0 w-[300px] h-[300px] flex flex-col justify-end px-4 py-2 bg-gradient-to-b from-transparent to-black bg-opacity-80 opacity-0 group-hover:opacity-80 transition-opacity">
               <span class="text-slate-50 text-xl">{project.data.title}</span>
