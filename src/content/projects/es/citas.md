@@ -1,6 +1,6 @@
 ---
 title: Citas app
-cover: "@assets/Citas.webp"
+cover: "./images/Citas.webp"
 coverAlt: "Agendar Citas Web"
 repo: "https://github.com/Leo0114/citas-react"
 web: "https://leo0114.github.io/citas-react/"

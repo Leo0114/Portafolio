@@ -1,6 +1,6 @@
 ---
 title: Seguimiento de Gastos
-cover: "@assets/Gastos.webp"
+cover: "./images/Gastos.webp"
 coverAlt: "Gastos Web"
 repo: "https://github.com/Leo0114/gastos"
 web: "https://leo0114.github.io/gastos/"

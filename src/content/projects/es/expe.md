@@ -1,6 +1,6 @@
 ---
 title: Experiences Web
-cover: "@assets/beach.webp"
+cover: "./images/beach.webp"
 coverAlt: "Experiences Web"
 repo:  "https://github.com/Leo0114/Experiences"
 web: "https://leo0114.github.io/Experiences/"

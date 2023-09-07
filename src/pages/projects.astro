@@ -1,6 +1,10 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Projectos from "@components/layout/Projectos.astro";
+import { getCollection } from "astro:content";
+
+const projects = await getCollection("projects");
+console.log(projects);
 ---
 
 <Layout
@@ -10,6 +14,6 @@ import Projectos from "@components/layout/Projectos.astro";
 >
   <div class="w-10/12 lg:w-8/12 mx-auto transition-all">
     <h1 class="text-5xl my-2">Proyectos</h1>
-    <Projectos />
+    <Projectos projects={projects} />
   </div>
 </Layout>

@@ -1,7 +1,10 @@
 ---
 import Imagen from "@components/layout/Imagen.astro";
-import { getCollection } from "astro:content";
-const projects = (await getCollection("projects")) as any[];
+import { type CollectionEntry, getEntryBySlug } from "astro:content";
+type Props = {
+  projects: CollectionEntry<"projects">[];
+};
+const { projects } = Astro.props;
 ---
 
 <div

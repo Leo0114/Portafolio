@@ -1,6 +1,6 @@
 ---
 title: Agencia Turistica
-cover: "@assets/cabanabanner.webp"
+cover: "./images/cabanabanner.webp"
 coverAlt: "Cabañas Web"
 repo: "https://github.com/Leo0114/volcancafe"
 web: "https://leo0114.github.io/volcancafe/"

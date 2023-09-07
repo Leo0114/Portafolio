@@ -16,7 +16,6 @@ export async function getStaticPaths() {
 }
 type Props = { post: CollectionEntry<"projects"> };
 const { post } = Astro.props;
-const { Content } = await post.render();
 ---
 
 <Layout>
@@ -53,6 +52,6 @@ const { Content } = await post.render();
   </section>
 
   <div class="prose prose-2xl mb-8 leading-relaxed text-lg text-justify">
-    <Content />
+    {post.body}
   </div>|
 </Layout>
