@@ -7,8 +7,7 @@
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"],
       "@content/*": ["src/content/*"],
-      "@assets/*": ["src/assets/*"],
-      "@data/*": ["src/data/*"]
+      "@assets/*": ["src/assets/*"]
     }
   }
 }

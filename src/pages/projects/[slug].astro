@@ -51,11 +51,12 @@ const { project } = Astro.props;
             >{project.data.build}</span
           >
         </p>
+        <div class="prose prose-2xl mb-8 leading-relaxed text-lg text-justify text-slate-300">
+          {project.body}
+        </div>|
         <GitButtons github={project.data.repo} web={project.data.web} />
       </div>
-      <div class="prose prose-2xl mb-8 leading-relaxed text-lg text-justify">
-        {project.body}
-      </div>|
+ 
     </div>
   </section>
 </Layout>
