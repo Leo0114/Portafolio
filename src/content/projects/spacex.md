@@ -8,4 +8,4 @@ build: Astro
 style: Tailwind
 ---
 
-      Web usando la API de Space X sobre sus lanzamientos, solo 12 lanzamientos, incluyendo fallidos y exitosos. Desarrollada en Astro Js con TailwindCss.
+      Web usando la API de Space X sobre sus lanzamientos, solo 12 lanzamientos, incluyendo fallidos y exitosos. Desarrollada en Astro Js con Tailwind Css.
