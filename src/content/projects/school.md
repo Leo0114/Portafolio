@@ -1,6 +1,6 @@
 ---
 title: School Website
-cover: "./images/Astro.webp"
+cover: "./images/udc.webp"
 coverAlt: "School page project"
 repo: "https://github.com/Leo0114/Terceraparcial"
 web: "https://leo0114.github.io/Terceraparcial/index.html"
