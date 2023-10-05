@@ -11,6 +11,9 @@ const { projects } = Astro.props;
   {
     projects.map((project) => {
       const route = `/Portafolio/projects/${project.slug}`;
+      const imagenes = `project ${project.data.cover} image`;
+      const titulo = `project ${project.data.cover} title`;
+
       return (
         <>
           <a
@@ -20,7 +23,7 @@ const { projects } = Astro.props;
             <picture class="flex justify-center p-4">
               <Imagen
                 ImgClass="rounded-lg  w-[300px] h-[200px] object-cover transition-all duration-200"
-                transition:name="img"
+                transition:name={imagenes}
                 transition:persist
                 img={project.data.cover}
                 alt={project.data.coverAlt}
@@ -28,7 +31,10 @@ const { projects } = Astro.props;
             </picture>
 
             <div class="p-4 flex-grow mx-auto text-center">
-              <h2 class=" text-xl font-bold tracking-tight text-white">
+              <h2
+                class=" text-xl font-bold tracking-tight text-white"
+                transition:name={titulo}
+              >
                 {project.data.title}
               </h2>
             </div>
