@@ -1,0 +1,40 @@
+---
+import { Image } from "astro:assets";
+import profile from "@assets/me.jpg";
+---
+
+<section>
+  <div
+    class="max-w-5xl 2xl:max-w-7xl mx-auto px-8 md:px-lg:px-24 py-24 lg:pt-16"
+  >
+    <div class="flex items-center">
+      <div>
+        <Image
+          class="inline-block h-48 lg:w-64 lg:h-96 w-24 object-cover rounded-full"
+          src={profile}
+          alt="profile pic"
+          quality={"low"}
+          loading={"lazy"}
+          format="avif"
+        />
+      </div>
+      <div class="ml-4 md:ml-36">
+        <p
+          class="font-semibold tracking-tighter text-4xl md:text-6xl lg:text-7xl text-slate-300"
+        >
+          Leonel Elizarraráz
+          <span class="text-slate-500 block">Web developer</span>
+        </p>
+        <div class="flex space-x-6 mt-12 text-slate-500 uppercase text-xs">
+          <a
+            href="https://github.com/Leo0114"
+            target="_blank"
+            class="duration-200 hover:text-slate-300"
+          >
+            GitHub</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
