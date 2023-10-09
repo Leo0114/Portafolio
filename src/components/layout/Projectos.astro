@@ -1,5 +1,6 @@
 ---
 import Imagen from "@components/layout/Imagen.astro";
+import { Image } from "astro:assets";
 import { type CollectionEntry } from "astro:content";
 type Props = {
   projects: CollectionEntry<"projects">[];
@@ -11,8 +12,8 @@ const { projects } = Astro.props;
   {
     projects.map((project) => {
       const route = `/Portafolio/projects/${project.slug}`;
-      const imagenes = `project ${project.data.cover} image`;
-      const titulo = `project ${project.data.cover} title`;
+      const imagenes = `project ${project.slug} image`;
+      const titulo = `project ${project.slug} title`;
 
       return (
         <>
@@ -22,9 +23,8 @@ const { projects } = Astro.props;
           >
             <picture class="flex justify-center p-4">
               <Imagen
+                transition={imagenes}
                 ImgClass="rounded-lg  w-[300px] h-[200px] object-cover transition-all duration-200"
-                transition:name={imagenes}
-                transition:persist
                 img={project.data.cover}
                 alt={project.data.coverAlt}
               />

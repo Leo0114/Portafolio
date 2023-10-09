@@ -6,8 +6,10 @@ interface Props {
   calidad?: string;
   alt: string;
   ImgClass?: string;
+  transition?: string;
 }
 const {
+  transition,
   img,
   calidad = "mid",
   alt,
@@ -15,4 +17,11 @@ const {
 } = Astro.props;
 ---
 
-<Image src={img} quality={calidad} format="avif" alt={alt} class={ImgClass} />
+<Image
+  src={img}
+  quality={calidad}
+  format="avif"
+  alt={alt}
+  class={ImgClass}
+  transition:name={transition}
+/>

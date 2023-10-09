@@ -14,7 +14,7 @@ const { title, seoDesc, seoTitle } = Astro.props;
     transition:animate={fade({ duration: "0.4s" })}
   >
     <Navbar />
-    <div transition:animate="slide">
+    <div>
       <slot />
     </div>
     <Footer />

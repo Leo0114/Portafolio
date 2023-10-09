@@ -22,8 +22,8 @@ export async function getStaticPaths() {
 type Props = { project: CollectionEntry<"projects"> };
 const { project } = Astro.props;
 
-const imagenes = `project ${project.data.cover} image`;
-const titulo = `project ${project.data.cover} title`;
+const imagenes = `project ${project.slug} image`;
+const titulo = `project ${project.slug} title`;
 ---
 
 <Layout>
@@ -32,8 +32,7 @@ const titulo = `project ${project.data.cover} title`;
     <div class="container mx-auto flex px-5 md:flex-row flex-col items-center">
       <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 md:mb-0 mb-10">
         <Imagen
-          transition:name={imagenes}
-          ;
+          transition={imagenes}
           alt={project.data.coverAlt}
           img={project.data.cover}
           ImgClass="object-cover object-center rounded-lg shadow-md drop-shadow-[10px_10px_35px_rgba(39,245,131,0.6)] "
