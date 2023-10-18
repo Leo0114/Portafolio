@@ -11,7 +11,7 @@ const { projects } = Astro.props;
 <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
   {
     projects.map((project) => {
-      const route = `/Portafolio/projects/${project.slug}`;
+      const route = `/projects/${project.slug}`;
       const imagenes = `project ${project.slug} image`;
       const titulo = `project ${project.slug} title`;
 

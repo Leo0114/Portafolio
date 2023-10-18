@@ -3,7 +3,7 @@ title: Home Smart
 cover: "./images/smart.webp"
 coverAlt: "Home Smart Web"
 repo: "https://github.com/Leo0114/HomeSmart"
-web: "https://leo0114.github.io/HomeSmart/"
+web: "https://home-smart-five.vercel.app/"
 build: Astro
 style: TailwindCss
 ---
