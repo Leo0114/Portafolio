@@ -10,12 +10,13 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/tailwind": "^5.0.2",
-    "@astrojs/vercel": "^5.2.0",
-    "astro": "^3.5.0",
-    "astro-navbar": "^2.3.0",
-    "astro-seo": "^0.8.0",
-    "tailwindcss": "^3.3.5",
+    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/vercel": "^7.3.4",
+    "@vercel/analytics": "^1.2.2",
+    "astro": "^4.4.11",
+    "astro-navbar": "^2.3.1",
+    "astro-seo": "^0.8.3",
+    "tailwindcss": "^3.4.1",
     "typed.js": "^2.1.0"
   },
   "devDependencies": {
