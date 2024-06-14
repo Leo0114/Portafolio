@@ -8,7 +8,7 @@ type Props = {
 const { projects } = Astro.props;
 ---
 
-<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 md:grid-cols-3">
   {
     projects.map((project) => {
       const route = `/projects/${project.slug}`;
@@ -24,7 +24,7 @@ const { projects } = Astro.props;
             <picture class="flex justify-center p-4">
               <Imagen
                 transition={imagenes}
-                ImgClass="rounded-lg  w-[300px] h-[200px] object-cover transition-all duration-200"
+                ImgClass="rounded-lg  w-[300px] h-[200px] object-contain transition-all duration-200"
                 img={project.data.cover}
                 alt={project.data.coverAlt}
               />

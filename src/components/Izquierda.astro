@@ -1,5 +1,5 @@
 ---
-
+import { PrimarySkills, SoftSkills } from "./data/about";
 ---
 
 <div class="flex flex-col gap-12">
@@ -114,16 +114,13 @@
       PRIMARY SKILLS
     </h2>
     <ul role="list" class="mt-4 space-y-2 text-sm text-slate-300/80">
-      <li>TypeScript & JavaScript</li>
-      <li>React & React Native</li>
-      <li>Qwik</li>
-      <li>Next Js</li>
-      <li>Tailwind Css</li>
-      <li>Astro</li>
-      <li>Git</li>
-      <li>HTML & CSS</li>
-      <li>SQL & MySQL</li>
-      <li>Materialize</li>
+      {
+        PrimarySkills.map((ps) => (
+          <li class=" hover:text-slate-100 cursor-pointer transition-all ease-in">
+            {ps}
+          </li>
+        ))
+      }
     </ul>
   </div>
   <div>
@@ -131,18 +128,20 @@
       SOFT SKILLS
     </h2>
     <ul role="list" class="mt-4 space-y-2 text-sm text-slate-300/80">
-      <li>Teamwork</li>
-      <li>Attention to detail</li>
-      <li>Communication skills</li>
-      <li>Continuous learning</li>
-      <li>Time management and organization</li>
+      {
+        SoftSkills.map((sS) => (
+          <li class=" hover:text-slate-100 cursor-pointer transition-all ease-in">
+            {sS}
+          </li>
+        ))
+      }
     </ul>
   </div>
   <div>
     <h2 class="text-2xl font-bold tracking-tight text-slate-200">LANGUAGES</h2>
     <ul role="list" class="mt-4 space-y-2 text-sm text-slate-300/80">
       <li>Spanish (native)</li>
-      <li>English (Intermedio)</li>
+      <li>English (Upper intermediate)</li>
     </ul>
   </div>
 </div>

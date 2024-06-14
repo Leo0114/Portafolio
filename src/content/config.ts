@@ -9,8 +9,8 @@ const projectsCollection = defineCollection({
       coverAlt: z.string(),
       web: z.string(),
       repo: z.string(),
-      build: z.string(),
-      style: z.string(),
+      build: z.array(z.string()),
+      order: z.number(),
     }),
 });
 

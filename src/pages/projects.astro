@@ -4,15 +4,19 @@ import Projectos from "@components/layout/Projectos.astro";
 import { getCollection } from "astro:content";
 
 const projects = await getCollection("projects");
+
+projects.sort((a, b) => a.data.order - b.data.order);
 ---
 
 <Layout
   title="Leo's Projects"
   seoTitle="Leo Proyectos"
-  seoDesc="I work with, Astro, react, tailwind and another Js Frameworks"
+  seoDesc="I work with, React, Astro, Tailwind and another Js/React type Frameworks"
 >
-  <div class="w-10/12 lg:w-8/12 mx-auto transition-all">
-    <h1 class="text-5xl my-2 pb-8">Proyectos</h1>
-    <Projectos projects={projects} />
+  <div class="w-10/12 mx-auto transition-all">
+    <h1 class="text-5xl my-2 pb-8 p-8">Projects</h1>
+    <div class="p-10">
+      <Projectos projects={projects} />
+    </div>
   </div>
 </Layout>

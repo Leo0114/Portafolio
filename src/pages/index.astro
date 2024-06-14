@@ -1,5 +1,5 @@
 ---
-import TypedText from "@components/layout/TypedText.astro";
+import TypedText from "@components/layout/TypedText";
 import Layout from "@layouts/Layout.astro";
 ---
 
@@ -14,9 +14,9 @@ import Layout from "@layouts/Layout.astro";
     <h1
       class="text-6xl md:text-5xl text-center drop-shadow-[0px_35px_35px_rgba(39,245,131,0.6)]"
     >
-      Hola 👋, Soy Leonel Arroyo Elizarraraz
+      Hello 👋, I am Leonel Arroyo Elizarraraz
     </h1>
 
-    <TypedText />
+    <TypedText client:load />
   </div>
 </Layout>

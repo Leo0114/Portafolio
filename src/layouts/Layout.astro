@@ -1,7 +1,7 @@
 ---
 import Navbar from "@components/Navbar.astro";
 import MainHead from "./MainHead.astro";
-import Footer from "@components/Footer.astro";
+import Footer from "@components/Footer";
 import { fade } from "astro:transitions";
 const { title, seoDesc, seoTitle } = Astro.props;
 ---
@@ -17,6 +17,6 @@ const { title, seoDesc, seoTitle } = Astro.props;
     <div>
       <slot />
     </div>
-    <Footer />
+    <Footer client:load />
   </body>
 </html>
