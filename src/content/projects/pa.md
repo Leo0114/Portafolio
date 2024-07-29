@@ -3,7 +3,7 @@ title: Project Amigo
 cover: "./images/ProjectA.webp"
 coverAlt: "Project Amigo Web"
 repo: "https://github.com/Leo0114/PA"
-web: "https://leopa.vercel.app/"
+web: "https://pademo.vercel.app/"
 order: 4
 build:
   - Astro
