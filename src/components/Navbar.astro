@@ -1,15 +1,21 @@
 ---
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 import Github from "@components/layout/Github.astro";
-const menuitems = [
-  { title: "Home", path: "/" },
-  { title: "Projects", path: "/projects" },
-  { title: "About", path: "/about" },
-];
+import NavLink from "./NavLink.astro";
+import SwitchLanguague from "./SwitchLanguague.astro";
+import {
+  getLangFromUrl,
+  useTranslatedPath,
+  useTranslations,
+} from "src/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 ---
 
 <div>
-  <div class="max-w-[1400px] mx-auto">
+  <div class="max-w-[1300px] mx-auto">
     <header
       class="flex flex-col lg:flex-row justify-between items-center gap-5 p-5"
     >
@@ -18,7 +24,7 @@ const menuitems = [
           class="flex w-full lg:w-auto items-center justify-between lg:justify-between"
         >
           <a
-            href="/"
+            href={translatePath("/")}
             class="text-2xl flex items-center"
             aria-label="Leo home portfolio site"
             role="link"
@@ -31,23 +37,16 @@ const menuitems = [
           </div>
         </div>
         <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
-          <div class="flex flex-col lg:flex-row">
-            {
-              menuitems.map((item) => (
-                <ul>
-                  <li class="flex px-4 p-2">
-                    <a
-                      href={item.path}
-                      class=" hover:underline text-lg  hover:scale-110 duration-300 "
-                      aria-label={item.title}
-                    >
-                      {item.title}
-                    </a>
-                  </li>
-                </ul>
-              ))
-            }
-          </div>
+          <ul class="flex flex-col lg:flex-row items-center">
+            <NavLink title={t("nav.index")} path={translatePath("/")} />
+            <NavLink
+              title={t("nav.projects")}
+              path={translatePath("/projects/")}
+            />
+            <NavLink title={t("nav.about")} path={translatePath("/about/")} />
+            <SwitchLanguague />
+          </ul>
+
           <Github />
         </MenuItems>
       </Astronav>

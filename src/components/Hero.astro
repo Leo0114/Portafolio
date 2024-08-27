@@ -1,6 +1,10 @@
 ---
 import { Image } from "astro:assets";
 import profile from "@assets/me.jpg";
+import { getI18N } from "@i18n/index";
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+const { title } = i18n.About;
 ---
 
 <section>
@@ -23,7 +27,7 @@ import profile from "@assets/me.jpg";
           class="font-semibold tracking-tighter text-4xl md:text-6xl lg:text-7xl text-slate-300"
         >
           Leonel Elizarraráz
-          <span class="text-slate-500 block">Front end developer</span>
+          <span class="text-slate-500 block">{title}</span>
         </p>
         <div class="flex space-x-6 mt-12 text-slate-500 uppercase text-xs">
           <a
@@ -32,6 +36,13 @@ import profile from "@assets/me.jpg";
             class="duration-200 hover:text-slate-300 text-slate-400 text-sm"
           >
             GitHub</a
+          >
+          <a
+            href="https://github.com/LeoAoEl"
+            target="_blank"
+            class="duration-200 hover:text-slate-300 text-slate-400 text-sm"
+          >
+            GitHub 2</a
           >
         </div>
       </div>

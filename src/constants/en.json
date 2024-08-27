@@ -1,0 +1,33 @@
+{
+    "About": {
+        "title": "Front end developer",
+        "subTitle": "About me",
+        "body": "Front-End Developer with two years of experience, specialized in React, React Native, and JavaScript environment. Passionate about developing innovative solutions and continuously improving user experience.",
+        "employment": "EMPLOYMENT HISTORY",
+        "Content": {
+            "body": "A section was developed for Implemental Systems, created using Qwik and React. TypeScript, Tailwind CSS, Vercel Analytics, and Cloudinary for hosting videos were utilized. This section of the website is multilingual, available in Spanish, English, and French, thanks to i18n. Access to this page is available through the following",
+            "body2": "I spearheaded the creation of a React Native application for the University of Colima's library, employing Redux, Git, CSS, TypeScript, and React Native Paper as fundamental tools. This project enhanced the library's digital services, offering an intuitive and efficient user interface for accessing resources.",
+            "body3": "As an intern, I initially took courses in database management, MySQL, and testing on the Carlos Slim platform, followed by a comprehensive Flutter course on Udemy to broaden my skills."
+        }
+    },
+    "Left": {
+        "contact": "Contact",
+        "education": "Education",
+        "skills": "Primary Skills",
+        "softSkills": {
+            "title": "Soft Skills",
+            "body": [
+                "TeamWork",
+                "Attention to details",
+                "Continuous learning",
+                "Communication skills",
+                "Time management and organization"
+            ]
+        },
+        "languages": {
+            "title": "Languages",
+            "spanish": "Spanish (native)",
+            "english": "English (Upper intermediate)"
+        }
+    }
+}

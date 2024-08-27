@@ -1,19 +1,20 @@
 ---
-
+import { getI18N } from "@i18n/index";
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+const { subTitle, body, employment, Content } = i18n.About;
 ---
 
 <div class="lg:col-span-2 flex flex-col gap-12">
   <div>
-    <h2 class="text-2xl font-bold tracking-tight text-slate-200">About me</h2>
+    <h2 class="text-2xl font-bold tracking-tight text-slate-200">{subTitle}</h2>
     <p class="mt-4 text-lg text-slate-400 prose">
-      Front-End Developer with two years of experience, specialized in React,
-      React Native, and JavaScript environment. Passionate about developing
-      innovative solutions and continuously improving user experience.
+      {body}
     </p>
   </div>
   <div>
     <h2 class="text-2xl font-bold tracking-tight text-slate-200">
-      EMPLOYMENT HISTORY
+      {employment}
     </h2>
 
     <div class="mb-12">
@@ -26,14 +27,12 @@
         </span>
       </p>
       <p class="mt-4 text-slate-400 text-lg prose font-medium">
-        A section was developed for Implemental Systems, created using Qwik and
-        React. TypeScript, Tailwind CSS, Vercel Analytics, and Cloudinary for
-        hosting videos were utilized. This section of the website is
-        multilingual, available in Spanish, English, and French, thanks to i18n.
-        Access to this page is available through the <a
+        {Content.body}<a
           href="https://is-products.vercel.app/es/solutions/geobint/"
           class="text-blue-500"
-          target="_blank">following link</a
+          target="_blank"
+        >
+          link</a
         >.
       </p>
     </div>
@@ -48,11 +47,7 @@
         </span>
       </p>
       <p class="mt-4 text-slate-400 text-lg prose font-medium">
-        I spearheaded the creation of a React Native application for the
-        University of Colima's library, employing Redux, Git, CSS, TypeScript,
-        and React Native Paper as fundamental tools. This project enhanced the
-        library's digital services, offering an intuitive and efficient user
-        interface for accessing resources.
+        {Content.body2}
       </p>
     </div>
 
@@ -64,9 +59,7 @@
         </span>
       </p>
       <p class="mt-4 text-slate-400 text-lg prose font-medium">
-        As an intern, I initially took courses in database management, MySQL,
-        and testing on the Carlos Slim platform, followed by a comprehensive
-        Flutter course on Udemy to broaden my skills.
+        {Content.body3}
       </p>
     </div>
   </div>

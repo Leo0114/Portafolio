@@ -1,0 +1,24 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Derecho from "@components/Derecho.astro";
+import Izquierda from "@components/Izquierda.astro";
+import Hero from "@components/Hero.astro";
+---
+
+<Layout
+  title="Leo About"
+  seoTitle="Acerca de mí"
+  seoDesc="Hi there! My name is Leonel, and i am a software engineer"
+>
+  <Hero />
+  <section>
+    <div class="max-w-5xl 2xl:max-w-7xl mx-auto px-8 md:px-lg:px-24 py-12">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-12"
+      >
+        <Izquierda />
+        <Derecho />
+      </div>
+    </div>
+  </section>
+</Layout>

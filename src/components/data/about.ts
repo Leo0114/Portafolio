@@ -12,11 +12,3 @@ export const PrimarySkills = [
   "SQL & MySQL",
   "Materialize",
 ];
-
-export const SoftSkills = [
-  "Teamwork",
-  "Attention to detail",
-  "Communication skills",
-  "Continuous learning",
-  "Time management and organization",
-];

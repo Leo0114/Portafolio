@@ -1,10 +1,14 @@
 ---
-import { PrimarySkills, SoftSkills } from "./data/about";
+import { PrimarySkills } from "./data/about";
+import { getI18N } from "@i18n/index";
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+const { education, languages, contact, skills, softSkills } = i18n.Left;
 ---
 
 <div class="flex flex-col gap-12">
   <div>
-    <h2 class="text-2xl font-bold tracking-tight text-slate-200">Contact</h2>
+    <h2 class="text-2xl font-bold tracking-tight text-slate-200">{contact}</h2>
     <dl class="mt-4 space-y-4 text-sm text-slate-400/80">
       <div class="flex gap-x-4 items-center text-slate-400/80 text-sm">
         <dt class="flex-none">
@@ -98,7 +102,9 @@ import { PrimarySkills, SoftSkills } from "./data/about";
     </dl>
   </div>
   <div>
-    <h2 class="text-2xl font-bold tracking-tight text-slate-200">Education</h2>
+    <h2 class="text-2xl font-bold tracking-tight text-slate-200">
+      {education}
+    </h2>
     <dl class="mt-4 space-y-4 text-sm text-slate-400/80">
       <div class="flex flex-col gap-2">
         <dt class="flex-col flex">
@@ -111,37 +117,35 @@ import { PrimarySkills, SoftSkills } from "./data/about";
   </div>
   <div>
     <h2 class="text-2xl font-bold tracking-tight text-slate-200">
-      PRIMARY SKILLS
+      {skills}
     </h2>
     <ul role="list" class="mt-4 space-y-2 text-sm text-slate-300/80">
       {
         PrimarySkills.map((ps) => (
-          <li class=" hover:text-slate-100 cursor-pointer transition-all ease-in">
-            {ps}
-          </li>
+          <li class=" hover:text-slate-100  transition-all ease-in">{ps}</li>
         ))
       }
     </ul>
   </div>
   <div>
     <h2 class="text-2xl font-bold tracking-tight text-slate-200">
-      SOFT SKILLS
+      {softSkills.title}
     </h2>
     <ul role="list" class="mt-4 space-y-2 text-sm text-slate-300/80">
       {
-        SoftSkills.map((sS) => (
-          <li class=" hover:text-slate-100 cursor-pointer transition-all ease-in">
-            {sS}
-          </li>
+        softSkills.body.map((sS) => (
+          <li class=" hover:text-slate-100  transition-all ease-in">{sS}</li>
         ))
       }
     </ul>
   </div>
   <div>
-    <h2 class="text-2xl font-bold tracking-tight text-slate-200">LANGUAGES</h2>
+    <h2 class="text-2xl font-bold tracking-tight text-slate-200">
+      {languages.title}
+    </h2>
     <ul role="list" class="mt-4 space-y-2 text-sm text-slate-300/80">
-      <li>Spanish (native)</li>
-      <li>English (Upper intermediate)</li>
+      <li>{languages.spanish}</li>
+      <li>{languages.english}</li>
     </ul>
   </div>
 </div>

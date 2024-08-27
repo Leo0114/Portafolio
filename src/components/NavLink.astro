@@ -1,0 +1,17 @@
+---
+interface Props {
+  path: string;
+  title: string;
+  className?: string;
+}
+const { path, title, className } = Astro.props;
+const { pathname } = Astro.url;
+const isActive = pathname === path;
+const linkClass = isActive
+  ? ` underline text-lg ease-in transition-all`
+  : `${className}`;
+---
+
+<li class="flex px-4 p-2">
+  <a href={path} class={linkClass} aria-label={title}>{title}</a>
+</li>

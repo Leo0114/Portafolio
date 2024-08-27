@@ -1,0 +1,33 @@
+{
+    "About": {
+        "title": "Desarrollador Front-End",
+        "subTitle": "Acerca de mí",
+        "body": "Desarrollador Front-End con dos años de experiencia, especializado en React, React Native y el entorno de JavaScript. Apasionado por desarrollar soluciones innovadoras y mejorar continuamente la experiencia del usuario.",
+        "employment": "HISTORIAL LABORAL",
+        "Content": {
+            "body": "Se desarrolló una sección para Implemental Systems, creada utilizando Qwik y React. Se emplearon TypeScript, Tailwind CSS, Vercel Analytics y Cloudinary para el alojamiento de videos. Esta sección del sitio web es multilingüe, disponible en español, inglés y francés, gracias a i18n. El acceso a esta página está disponible a través del siguiente",
+            "body2": "Lideré la creación de una aplicación React Native para la biblioteca de la Universidad de Colima, empleando Redux, Git, CSS, TypeScript y React Native Paper como herramientas fundamentales. Este proyecto mejoró los servicios digitales de la biblioteca, ofreciendo una interfaz de usuario intuitiva y eficiente para acceder a los recursos.",
+            "body3": "Como pasante, inicialmente tomé cursos de gestión de bases de datos, MySQL y pruebas en la plataforma de Carlos Slim, seguidos de un curso completo de Flutter en Udemy para ampliar mis habilidades."
+        }
+    },
+    "Left": {
+        "contact": "Contacto",
+        "education": "Educación",
+        "skills": "Habilidades Principales",
+        "softSkills": {
+            "title": "Habilidades",
+            "body": [
+                "Trabajo en equipo",
+                "Atención a los detalles",
+                "Habilidades de comunicación",
+                "Aprendizaje continuo",
+                "Gestión del tiempo y organización"
+            ]
+        },
+        "languages": {
+            "title": "Idiomas",
+            "spanish": "Español (nativo)",
+            "english": "Inglés (intermedio alto)"
+        }
+    }
+}
